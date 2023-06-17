@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Personal Website 
+Hey! This is the code for my personal website. Feel free to reuse any code snippets. 
+
+Domain: Coming Soon!
+
+
+# Getting Started 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
