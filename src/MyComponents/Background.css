@@ -11,6 +11,7 @@
     background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
     background-origin: border-box;
     background-clip: content-box, border-box;
+    overflow: auto;
   }
   
   #container-stars {
@@ -24,6 +25,7 @@
     border-radius: 5rem;
   }
   
+  
   .spaceStyle {
     z-index: 2;
     font-family: 'Avalors Personal Use';
@@ -31,7 +33,42 @@
     letter-spacing: .25vw;
     color: #FFFFFF;
     text-shadow: 0 0 .25vw white;
+    cursor: pointer;
+    border: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    position: relative;
+
   }
+
+
+  .spaceStyle:focus,
+  .spaceStyle:hover {
+    color: #fff;
+  }
+  
+  .spaceStyle:focus:after,
+  .spaceStyle:hover:after {
+    width: 80%;
+    left: 10%;
+  }
+  
+  .spaceStyle:after {
+    content: "";
+    pointer-events: none;
+    bottom: -15%;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: .25vh;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+
   .spaceStyleHeading {
     z-index: 2;
     font-family: 'Avalors Personal Use';
@@ -204,10 +241,13 @@
 
   }
 
+  .hoverUnderline {
 
-/* Styles for screens smaller than 600px */
-@media (max-width: 599px) {
-    /* CSS rules specific to small screens */
+  }
+
+
+
+  
     .mediaStyle {
         z-index: 2;
         display: flex;
@@ -221,75 +261,23 @@
       }
     
     .iconStyle {
-        width: 5vw;
-        height: 100%;
+        width: 75px;
+        height: 75px;
         background-color: transparent;
         border: none;
     }
     
     .imageStyle {
-        width: 90%;
-        height: 25%;
+        width: 35px;
+        height: 35px;
+        filter: brightness(1.5);
+        cursor: pointer;
     }
 
-   
-  }
   
-  /* Styles for screens between 600px and 959px */
-  @media (min-width: 600px) and (max-width: 959px) {
-    /* CSS rules specific to medium screens */
-    .mediaStyle {
-        z-index: 2;
-        display: flex;
-        justify-content: space-evenly;
-        position: fixed;
-        bottom: 5vh;
-        right: 5vw;
-        width: 35vw;
-        height: 10vh;
-        background-color: transparent;
-      }
-    
-    .iconStyle {
-        width: 5vw;
-        height: 100%;
-        background-color: transparent;
-        border: none;
-    }
-    
-    .imageStyle {
-        width: 90%;
-        height: 45%;
-    }
-  }
+ 
   
-  /* Styles for screens larger than or equal to 960px */
-  @media (min-width: 960px) {
-    /* CSS rules specific to large screens */
-    .mediaStyle {
-        z-index: 2;
-        display: flex;
-        justify-content: space-evenly;
-        position: fixed;
-        bottom: 5vh;
-        right: 5vw;
-        width: 35vw;
-        height: 10vh;
-        background-color: transparent;
-      }
-    
-    .iconStyle {
-        width: 5vw;
-        height: 100%;
-        background-color: transparent;
-        border: none;
-    }
-    
-    .imageStyle {
-        width: 85%;
-        height: 65%;
-    }
-  }
+  
   
 
 .aboutMe {
@@ -308,13 +296,11 @@
 }
 
 
-
-
 .avatar {
-    width: 50%;
-    height: 50%;
-    border-radius: 50%; /* Creates a circular shape */
-    overflow: hidden; /* Clips the image within the circular shape */
-    border: white 2px solid;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* Creates a circular shape */
+  overflow: hidden; /* Clips the image within the circular shape */
+  border: white 2px solid;
 }
 
