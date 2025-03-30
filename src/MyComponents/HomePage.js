@@ -1,5 +1,5 @@
 import React from 'react'
-import '/Users/yuvvvvv/Personal_Website/webpage/src/App.css'; // Adjust the filename if you used a different name
+import '../App.css'; // Use relative path for imports
 
 export const HomePage = () => {
     const home=  {
@@ -64,7 +64,7 @@ export const HomePage = () => {
 
     const headerStyle = {
         color: 'white',
-        fontFamily: 'Orbitron',
+        fontFamily: "'Orbitron', sans-serif",
         fontSize: '1.5vw',
     }
     const linkStyle = {
@@ -94,19 +94,19 @@ export const HomePage = () => {
 
     const strongHeading = {
         color: 'white',
-        fontFamily: 'Orbitron',
+        fontFamily: "'Orbitron', sans-serif",
         fontSize: '3vw',
     }
     
     const secondHeading = {
         color: 'white',
-        fontFamily: 'Orbitron',
+        fontFamily: "'Orbitron', sans-serif",
         fontSize: '1.5vw',
     }
 
     const normalText = {
         color: 'white',
-        fontFamily: 'Orbitron',
+        fontFamily: "'Orbitron', sans-serif",
         fontSize: '1.25vw',
     }
 
